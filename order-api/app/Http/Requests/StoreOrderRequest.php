@@ -17,17 +17,11 @@ class StoreOrderRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'customer_name' => ['required', 'string', 'max:255'],
-            'item_name'     => ['required', 'string', 'max:255'],
-            'price'         => ['required', 'numeric', 'min:0'],
+            'customer_name' => ['required', 'string', 'max:50', 'min:3'],
+            'item_name'     => ['required', 'string', 'max:100', 'min:3'],
+            'price'         => ['required', 'numeric', 'min:0.01'],
             'status'        => ['required', 'in:pending,paid,cancelled'],
         ];
     }
 
-    // public function prepareForValidation(): void
-    // {
-    //     if (!$this->has('status')) {
-    //         $this->merge(['status' => 'pending']);
-    //     }
-    // }
 }

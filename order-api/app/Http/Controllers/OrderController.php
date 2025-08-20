@@ -15,7 +15,7 @@ class OrderController extends Controller
      */
     public function index(): JsonResponse
     {
-        return response()->json(Order::orderByDesc('created_at')->get());
+        return response()->json(Order::orderByDesc('created_at')->paginate(2));
     }
 
     /**
