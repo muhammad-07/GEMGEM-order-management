@@ -26,4 +26,6 @@ Set apiBase in next config or app/pages/orders/index.vue then run following comm
 ```npm install ```
 ```npm run dev```
 
-- [Working Demo Video](https://link).
+**visit /orders to access the orders page**
+
+- [Working Demo Video](https://app.usebubbles.com/wJBRvomfMGMTYwuaFBSq2c/muhammad-order-management).
